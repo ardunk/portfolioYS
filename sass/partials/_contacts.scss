@@ -1,0 +1,96 @@
+.contacts {
+  @include flex-center-y;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient($first-screen-overlay,  $first-screen-overlay),
+  url('../images/backgrounds/bg-screen1.jpg');
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 767px) {
+    background-image: linear-gradient($first-screen-overlay,  $first-screen-overlay),
+    url('../images/backgrounds/bg-screen-mobile.jpg');
+    background-position: center top;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50.5%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 60vh solid transparent;
+    border-right: 60vh solid transparent;
+    border-bottom: 100vh solid $first-screen-overlay;
+
+    @media (max-width: 767px) {
+      border-left: 58vh solid transparent;
+      border-right: 58vh solid transparent;
+      border-bottom: 96vh solid $first-screen-overlay;
+    }
+  }
+}
+
+.contacts-list {
+  position: relative;
+  z-index: 1;
+  width: 574px;
+  max-width: 96%;
+  text-align: center;
+  margin: 0 0 6% 0;
+
+  @media (max-width: 767px) {
+    width: 314px;
+    margin-bottom: min(118px, 19vh);
+  }
+}
+
+.contacts-title {
+  margin: 40px 0 30px 0;
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: $font-light;
+
+  @media (max-width: 767px) {
+    margin: 24px 0 30px 0;
+    line-height: 32px;
+  }
+
+  &:first-of-type {
+    margin: 0 0 30px 0;
+  }
+}
+
+.contacts-link {
+  margin: 0 0 15px 0;
+  font-family: 'Taviraj', serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 45px;
+  color: $font-violet;
+  transition: 100ms;
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &:last-of-type {
+    margin: 0;
+
+    @media (max-width: 767px) {
+      width: 250px;
+      margin: 0 auto;
+      word-break: break-word;
+    }
+  }
+
+  &:hover {
+    color: $font-dark;
+  }
+}

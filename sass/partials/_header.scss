@@ -1,0 +1,143 @@
+header {
+  position: relative;
+  z-index: 4;
+  margin: 64px auto 0 auto;
+  width: 100vw;
+
+  @media (max-width: 767px) {
+    margin: 25px auto 0 auto;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    margin: 0;
+
+    @media (max-width: 767px) {
+      top: 25px;
+    }
+  }
+}
+
+.header-layout {
+  @include flex-center-y;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+  width: 1130px;
+  max-width: 96%;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    padding: 0 35px 0 35px;
+  }
+}
+
+.header-layout-logo {
+  @include flex-center-xy;
+  width: 234px;
+  height: 62px;
+
+  @media (max-width: 767px) {
+    width: 150px;
+    height: 45px;
+  }
+
+  h1 {
+    text-indent: -9999px;
+  }
+}
+
+.header-layout-navbar {
+  display: flex;
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: $font-light;
+
+  &.dark {
+    color: $font-dark-violet;
+
+    &.open {
+      color: $font-light;
+    }
+  }
+
+  &.open {
+    @include flex-center-xy;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(103, 107, 144, 0.9);
+    flex-direction: column;
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+.header-layout-navbar-item {
+  margin: 0 54px 0 0;
+  transition: 100ms;
+
+  @media (max-width: 767px) {
+    margin: 0 0 24px 0;
+  }
+
+  &.selected {
+    color: $font-dark;
+  }
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &:hover {
+    color: $font-dark;
+  }
+}
+
+.header-layout-button {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 35px;
+    cursor: pointer;
+    width: 34px;
+    height: 18px;
+    background-image: url("../images/icons/icon-menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 100ms;
+  }
+
+  &.dark {
+    background-image: url("../images/icons/icon-menu-dark.png");
+
+    &.open {
+      // position: fixed;
+      top: 48px;
+    }
+  }
+
+  &.open {
+    background-image: url("../images/icons/icon-close.png");
+    width: 27px;
+    height: 27px;
+  }
+}

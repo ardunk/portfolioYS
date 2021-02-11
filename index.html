@@ -1,0 +1,92 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="./sass/fullpage.css" type="text/css" />
+	<link rel="stylesheet" href="./sass/owl.carousel.css" type="text/css" />
+	<link rel="stylesheet" href="./sass/owl.theme.default.css" type="text/css" />
+	<link rel="stylesheet" href="./css/all.css" type="text/css" />
+	<title>Juliettee.Julia | Web Designer Portfolio</title>
+</head>
+
+<body>
+	<div id="wrapper" class="first-screen">
+		<header class="fixed">
+			<div class="header-layout">
+				<div class="header-layout-logo">
+					<img src="./images/logo-light.png" alt="logo" />
+					<h1>Juliettee.Julia</h1>
+				</div>
+				<nav>
+					<ul id="header-layout-navbar" class="header-layout-navbar">
+						<li class="header-layout-navbar-item">
+							<a href="./projects.html">PROJECTS</a>
+						</li>
+						<li class="header-layout-navbar-item">
+							<a href="./about.html">ABOUT</a>
+						</li>
+						<li class="header-layout-navbar-item">
+							<a href="./contacts.html">CONTACTS</a>
+						</li>
+					</ul>
+				</nav>
+				<div id="header-layout-button" class="header-layout-button"></div>
+			</div>
+		</header>
+		<main>
+			<div id="fullpage">
+				<div class="section first-screen-1">
+					<div class="first-screen-title">
+						<p class="first-screen-title-line">CREATION</p>
+						<p class="first-screen-title-line">of modern</p>
+						<p class="first-screen-title-line">WEBSITE</p>
+						<p class="first-screen-title-line">DESIGN</p>
+					</div>
+				</div>
+				<div class="section first-screen-2">
+					<div class="first-screen-title">
+						<p class="first-screen-title-line">DEVELOPMENT</p>
+						<p class="first-screen-title-line">of useful</p>
+						<p class="first-screen-title-line">USER</p>
+						<p class="first-screen-title-line">INTERFACE</p>
+					</div>
+				</div>
+				<div class="section first-screen-3">
+					<div class="first-screen-title">
+						<p class="first-screen-title-line">IMPROVEMENT</p>
+						<p class="first-screen-title-line">of personal</p>
+						<p class="first-screen-title-line">BRAND</p>
+						<p class="first-screen-title-line">HISTORY</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="vertical-navigation">
+			<div class="vnav-arrows">
+				<div id="vnav-arrow-up"></div>
+				<div id="vnav-arrow-down"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="./js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="./js/scrolloverflow.js"></script>
+	<script type="text/javascript" src="./js/fullpage.js"></script>
+	<script type="text/javascript" src="./js/owl.carousel.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				loopBottom: true,
+				loopTop: true,
+				verticalCentered: false
+			});
+		});
+	</script>
+</body>
+
+</html>

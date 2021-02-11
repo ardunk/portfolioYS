@@ -1,0 +1,75 @@
+@mixin flex-center-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
+@mixin project-page-tile-colors {
+  &.color-FFF9F9 {
+    background-color: #FFF9F9;
+  }
+  &.color-CFAFDE {
+    background-color: #CFAFDE;
+  }
+  &.color-873F88 {
+    background-color: #873F88;
+  }
+  &.color-904760 {
+    background-color: #904760;
+  }
+  &.color-4A1861 {
+    background-color: #4A1861;
+  }
+  &.color-F1EEEE {
+    background-color: #F1EEEE;
+  }
+  &.color-FFE8E4 {
+    background-color: #FFE8E4;
+  }
+  &.color-B8BBCC {
+    background-color: #B8BBCC;
+  }
+  &.color-787994 {
+    background-color: #787994;
+  }
+  &.color-16171B {
+    background-color: #16171B;
+  }
+  &.color-D9FDD9 {
+    background-color: #D9FDD9;
+  }
+  &.color-67AF43 {
+    background-color: #67AF43;
+  }
+  &.color-608C33 {
+    background-color: #608C33;
+  }
+  &.color-3D5823 {
+    background-color: #3D5823;
+  }
+  &.color-213111 {
+    background-color: #213111;
+  }
+}
+
+@mixin project-page-polygon-colors {
+  &.color-785580 {
+    background-color: #785580;
+  }
+  &.color-676B90 {
+    background-color: #676B90;
+  }
+  &.color-608C33 {
+    background-color: #608C33;
+  }
+}

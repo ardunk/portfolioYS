@@ -1,0 +1,60 @@
+.vertical-navigation {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  &.absolute {
+    position: absolute;
+  }
+}
+
+.vnav-arrows {
+  @include flex-center-y;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 40px;
+  margin: 0 auto;
+
+  &.hidden {
+    visibility: hidden;
+  }
+}
+
+#vnav-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid $font-light;
+  transition: 100ms;
+  cursor: pointer;
+
+  &.clicked {
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-bottom: 16px solid $font-dark;
+  }
+}
+
+#vnav-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 16px solid $font-light;
+  transition: 100ms;
+  cursor: pointer;
+
+  &.clicked {
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-top: 16px solid $font-dark;
+  }
+}
